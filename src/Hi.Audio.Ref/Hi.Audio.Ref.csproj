@@ -1,0 +1,17 @@
+﻿<Project ToolsVersion="4.0" Sdk="MSBuild.Sdk.Extras/3.0.38">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;</TargetFrameworks>
+		<Nullable>enable</Nullable>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<!--<Optimize>true</Optimize>-->
+		<!--<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>-->
+		<!--<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>-->
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<DefineConstants>PARITY</DefineConstants>
+		<NoWarn>CS8600;CS8604;CS8618;CS0162;CS8603;CS8602;CS8601;CS0168;CS0649;CS0618;</NoWarn>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Version>1.0.0.2</Version>
+	</PropertyGroup>
+</Project>
+ 

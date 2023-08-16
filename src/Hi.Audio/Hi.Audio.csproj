@@ -1,0 +1,29 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.38">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.1;netcoreapp3.1;net6.0;net6.0-windows7.0;MonoAndroid90;</TargetFrameworks>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+		<PackageReference Include="NAudio" Version="2.1.0" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="NAudio" Version="2.1.0" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-windows7.0'">
+		<PackageReference Include="NAudio" Version="2.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NetPs.Udp" Version="1.0.30805" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="SDL\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Hi.Audio.Ref\Hi.Audio.Ref.csproj" />
+	</ItemGroup>
+</Project>
