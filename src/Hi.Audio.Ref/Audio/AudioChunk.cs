@@ -1,8 +1,6 @@
 ﻿namespace Hi.Audio
 {
     using System;
-    using System.Collections.Generic;
-    using System.IO;
 
     public class AudioChunk
     {
@@ -164,27 +162,13 @@
         public static float[] ShortToFloat(short[] data)
         {
             var output = new float[data.Length];
-            float scale = (float)(short.MaxValue);
+            var scale = (float)short.MaxValue;
             int ix = 0;
-            while(ix < data.Length)
+            while (ix < data.Length)
             {
                 output[ix] = data[ix++] / scale;
             }
             return output;
         }
-        //public AudioChunk RNN()
-        //{
-        //    var de = new RNNoiseSharp.Denoiser();
-        //    var buff = ShortToFloat(Data);
-        //    var length = de.Denoise(buff);
-        //    float scale = (float)(short.MaxValue);
-        //    int ix = 0;
-        //    while (ix < Data.Length)
-        //    {
-        //        Data[ix] = (short)(Data[ix++] * scale);
-        //    }
-
-        //    return this;
-        //}
     }
 }

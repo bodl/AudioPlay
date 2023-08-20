@@ -14,7 +14,6 @@
 
     class Program
     {
-
         static async Task Main()
         {
             await RealtimePlayDemo.Run();

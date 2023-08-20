@@ -41,7 +41,6 @@ namespace AudioPlay
                         player.Play();
                     }
                 }
-                //player.Add(new AudioChunk(new byte[192], 48000));
             }
             //Console.Read();
         }
