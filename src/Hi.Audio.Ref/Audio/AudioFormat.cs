@@ -1,6 +1,7 @@
 ﻿namespace Hi.Audio
 {
     using System;
+    using System.Collections.Generic;
 
     public enum AudioFormatEncoding
     {
@@ -83,5 +84,23 @@
             Channels = channels;
             BitsPerSample = bitsPerSample;
         }
+
+        /// <summary>
+        /// 字节序
+        /// </summary>
+        /// <remarks>
+        /// little-endian\big-endian (Default: little-endian)
+        /// </remarks>
+        public bool BigEndian { get; set; } = false;
+
+        public Dictionary<string, object> Properties { get; set; }
+
+        /// <summary>
+        /// 浮点类型
+        /// </summary>
+        /// <remarks>
+        /// 取自Encoding, PcmFloat 则为浮点类型
+        /// </remarks>
+        public bool IsFloatingPoint => Encoding == AudioFormatEncoding.PcmFloat;
     }
 }

@@ -5,19 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hi.Audio.Ref.Codec;
 
 namespace AudioPlay
 {
     internal class RealtimePlayDemo
     {
-        public static async void Run()
+        public static async Task Run()
         {
             var format = new AudioFormat(48000, 2, 16);
             format.BufferMilliseconds = 10;
-            format.DesiredLatency = 70;
+            format.DesiredLatency = 100;
             var reader = new AudioRecorder(format, 0);
             var player = new AudioPlayer(reader.AudioFormat);
-            var codec = new FlacCodec(reader.AudioFormat);
+            var codec = new Mp3Codec(reader.AudioFormat);
             //var codec = new OpusCodec(reader.AudioFormat, OpusApplication.OPUS_APPLICATION_RESTRICTED_LOWDELAY);
             //codec.Bitrate = 510;
             //codec.Complexity = 10;
@@ -26,7 +27,7 @@ namespace AudioPlay
             Console.Write("Starting");
             reader.Start();
 
-            player.Volume = 1f;
+            //player.Volume = 1f;
             while (true)
             {
                 while (reader.CanReadChunk)
@@ -40,7 +41,9 @@ namespace AudioPlay
                         player.Play();
                     }
                 }
+                //player.Add(new AudioChunk(new byte[192], 48000));
             }
+            //Console.Read();
         }
     }
 }

@@ -9,7 +9,10 @@
 		<!--<RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>-->
 		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 		<DefineConstants>PARITY</DefineConstants>
-		<NoWarn>CS8600;CS8604;CS8618;CS0162;CS8603;CS8602;CS8601;CS0168;CS0649;CS0618;</NoWarn>
+		<NoWarn>
+			CS8600;CS8604;CS8618;CS0162;CS8603;CS8602;CS8601;CS0168;CS0649;CS0618;
+			CS8629;CS0675;CS8619;CS0652;CS0642;CS0169; <!--Groovy-->
+		</NoWarn>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
 		<Version>1.0.0.2</Version>
 	</PropertyGroup>

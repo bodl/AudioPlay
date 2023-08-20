@@ -66,7 +66,7 @@ namespace Hi.Audio
         /// <summary>
         /// 标识
         /// </summary>
-        public virtual AudioFlags AudioFlags { get; set; } = AudioFlags.HwAvSync;
+        public virtual AudioFlags AudioFlags { get; set; } = AudioFlags.None;
         /// <summary>
         /// 流类型
         /// </summary>
